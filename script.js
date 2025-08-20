@@ -26,5 +26,10 @@ googleLogin.addEventListener("click", function () {
       const user = result.user;
       console.log("User logged in:", user.displayName);
       alert("Welcome " + user.displayName);
+      window.addEventListener("error", (e) => {
+        console.error("Error occurred:", e.message);
+      });
+
     });
 });
+
